@@ -24,4 +24,6 @@ n = Newboy()  # call protected
 
 s._protectedclass()  # true
 s.publicclass()  # true
+
+n._protectedclass()
 # s.__privateclass()  # error
