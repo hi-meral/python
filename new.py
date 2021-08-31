@@ -1,22 +1,7 @@
-class A:
-    def __init__(self) -> None:
-        pass
-
-    def _parentmethod(self):
-        print("parent method called")
+s1 = {2, 3, 1}
+s2 = {'b', 'a', 'c'}
+z = zip(s1, s2)
 
 
-class B(A):
+print(next(z))
 
-    def __init__(self) -> None:
-        super().__init__()
-
-    def parentmethod(self):
-        print("child method called")
-
-
-a = A()
-a._parentmethod()
-
-b = B()
-b.parentmethod()
