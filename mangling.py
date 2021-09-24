@@ -12,6 +12,8 @@ class Student:
     def publicclass(self):
         self.__privateclass()
 
+    def callName(self):
+        print(self.__name)
 
 class Newboy(Student):
 
@@ -24,5 +26,14 @@ class Newboy(Student):
 s = Student("Meral")
 n = Newboy("Tom")
 
-print(s._Student__name)
-print(n._Student__name)
+#print(s.__name) # error
+s.callName()  # works
+
+s.__name = "Hero"  # no error and no change as well
+
+s.callName()  # works
+
+print(s._Student__name) # bad practice
+print(n._Student__name) # very bad practice
+
+##print(n._Newboy__name)  # error
