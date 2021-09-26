@@ -1,20 +1,11 @@
-def debug_deco(func):
-    def nested1(*args):
-        print(f'calling function - {func.__name__}')
-        print(f'with parameters - {args}')
-        return func(*args)
-    return nested1
+def log_decorator(client_function):
+    def wrapper_function(*args, **kwargs):
+        print (f"{client_function.__name__}  {args},{kwargs} ")
+        return client_function(*args, **kwargs)
+    return wrapper_function
 
+@log_decorator
+def printMsg(msg,time="noon"):
+    print(msg+" at " + time)
 
-@debug_deco
-def addme(x, y):
-    print(x+y)
-
-
-@debug_deco
-def multime(x, y):
-    print(x*y)
-
-
-addme(1, 3)
-multime(2, 5)
+printMsg("Hey, whats up",time="morning")
