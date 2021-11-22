@@ -1,3 +1,19 @@
+# NORMAL GENERATORS ARE LIKE
+
+g = (x*2/3 for x in range(10))
+
+print(g)
+
+print(next(g))
+print(next(g))
+print(next(g))
+
+
+print('\n\n\n\n')
+
+
+## CUSTOM GENERATORS ARE LIKE, USING YIELD ###
+
 def revString(str):
 
     l = len(str)

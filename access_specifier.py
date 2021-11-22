@@ -1,4 +1,7 @@
 class Student:
+
+    a = 20
+
     def __init__(self) -> None:
         pass
 
@@ -26,4 +29,8 @@ s._protectedclass()  # true
 s.publicclass()  # true
 
 n._protectedclass()
+
+n.publicclass()
 # s.__privateclass()  # error
+
+print(s.a)

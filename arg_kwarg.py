@@ -1,10 +1,12 @@
 
 def callme(*a, **b):
 
+    print(type(a))
+    print(type(b))
     for x in a:
         print(x, end="\n")
 
-    print(end="\n\n")
+    print("------------",end="\n\n")
 
     for k, v in b.items():
         print(k, v, end="\n")

@@ -33,7 +33,7 @@ s.__name = "Hero"  # no error and no change as well
 
 s.callName()  # works
 
-print(s._Student__name) # bad practice
+print(s._Student__name) # bad practice and called mangling
 print(n._Student__name) # very bad practice
 
 ##print(n._Newboy__name)  # error

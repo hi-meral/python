@@ -6,6 +6,6 @@ def log_decorator(client_function):
 
 @log_decorator
 def printMsg(msg,time="noon"):
-    print(msg+" at " + time)
+    print(msg + time)
 
-printMsg("Hey, whats up",time="morning")
+printMsg("Hey, call me in the ",time="morning")

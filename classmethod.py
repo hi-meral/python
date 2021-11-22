@@ -14,9 +14,12 @@ class Person:
         return cls(name, age1)
 
 
-p = Person("Meral", 40)
+p = Person("Meral", 30)
+
+print(p)
+print(p.age)
 
 
-a = p.by_birthdate("Ankit", "1986/11/16")
-
+a = p.by_birthdate("SimSim", "1996/11/10")
+print(a)
 print(a.age)

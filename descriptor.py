@@ -4,7 +4,7 @@ class AgeDescriptor:
         self.age = {}
 
     def __get__(self, instance, owner):
-        return self.age
+        return self.age[instance]
 
     def __set__(self, instance, value):
         if not isinstance(value, int):
@@ -12,10 +12,10 @@ class AgeDescriptor:
         elif(value < 0 or value > 120):
             raise TypeError("Name must be a genuin")
         else:
-            self.age = value
+            self.age[instance] = value
 
     def __delele__(self, instance):
-        del self.age
+        del self.age[instance]
 
 
 class Person:

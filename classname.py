@@ -1,20 +1,32 @@
 class Pizza():
 
-    you = 40
-
-    def __init__(self, ingredients) -> None:
-        self.ingredients = ingredients
+    def __init__(self, pizzaname) -> None:
+        self.pizzaname = pizzaname
 
     @classmethod
-    def margrita(cls):
-        self.you = 42 # error
-        return cls(['cheese'])
+    def fromIngredients(cls,ingredients=['cheese']):
 
-    @staticmethod
-    def welcome(name):
-        return f'Hello, {name} welcome to pizza zone'
+        if(all( i in ingredients for i in ['cheese'] )):
+            return cls('Margrita')
+        elif (all (i in ingredients for i in ['paneer','capsicum'] )):
+            return cls('Loaded')
+        elif ( all (i in ingredients  for i in ['brocoly','olive'] )):
+            return cls('Veggi')
+        else:
+            return cls('Mixed')
+
+    def enjoy(self):
+        print (f'Hello There, Enjoy the {self.pizzaname} Pizza ')
 
 
-p = Pizza(['bit'])
+t = Pizza('Tufani')
 
-Q = p.margrita()  # new object
+t.enjoy()
+
+m = Pizza.fromIngredients(['Cheese','Garlic'])
+
+m.enjoy()
+
+v = Pizza.fromIngredients(['brocoly','olive','Mashroom'])
+
+v.enjoy()

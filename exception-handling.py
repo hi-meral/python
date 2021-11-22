@@ -7,14 +7,14 @@ try:
 
     x = 1/1
 
-    # generate the error implicitally 
-    #raise NameError("Hello")  
+    # generate the error implicitally
+    #raise NameError("Hello")
 except FileNotFoundError as err:
-    print(err)
+    print("FileNotFoundError : " + err)
 except NameError as err:
-    print(err)
+    print("NameError" + err)
 except Exception as err:
-    print("Oops!",sys.exc_info()[0],"occured.")
+    print("Oops! ", sys.exc_info()[0], "occured.")
 
 else:
     print("congrats no error")
