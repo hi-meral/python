@@ -128,8 +128,12 @@ class LinkedList():
         while itr.next:
 
             if (itr.next.data == data):
-                itr.next = itr.next.next
-                itr.next.prev = itr
+                if(itr.next.next):
+                    itr.next = itr.next.next
+                    itr.next.prev = itr
+                else:
+                    itr.next = None
+
                 break
 
             itr = itr.next
@@ -175,13 +179,12 @@ if __name__ == '__main__':
     ll.printme()
     ll.remove_by_value("orange")  # remove orange from linked list
     ll.printme()
-    # ll.remove_by_value("figs")
-    # ll.printme()
-    # ll.remove_by_value("banana")
-    # ll.remove_by_value("mango")
-    # ll.remove_by_value("apple")
-    # ll.remove_by_value("grapes")
-    # ll.printme()
+    ll.remove_by_value("banana")
+    ll.remove_by_value("mango")
+    ll.remove_by_value("apple")
+    ll.printme()
+    ll.remove_by_value("grapes")
+    ll.printme()
 
-    ll.print_forward()
-    ll.print_backward()
+    # ll.print_forward()
+    # ll.print_backward()
