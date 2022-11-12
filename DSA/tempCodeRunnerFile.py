@@ -1,2 +1,2 @@
-h["march 6"] = 299
-# del h["march 17"]
+ if arr[j-gap] == anchor:
+                duplicate_ele_key.append(j-gap)
