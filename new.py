@@ -1,36 +1,27 @@
-from CreateLLfromL import *
+class LRUCache:
 
+    # @param capacity, an integer
+    def __init__(self, capacity):
+        self.hold = []
+        self.HS = {}
+        self.capacity = capacity
 
-NLL = ListNode([1, 2, 3, 4, 5, 6])
-
-
-class Solution:
-    # @param A : head node of linked list
     # @return an integer
-    def solve(self, A):
 
-        if A.next is None:
-            return None
+    def get(self, key):
 
-        if A.next.next is None:
-            A = A.next
-            return A
+        return self.HS.get(key, -1)
 
-        S = A
-        F = A
+    # @param key, an integer
+    # @param value, an integer
+    # @return nothing
+    def set(self, key, value):
 
-        while F.next.next is not None and F.next.next.next is not None:
-            S = S.next
-            F = F.next.next
+        if len(self.hold) == self.capacity:
+            x = self.hold.pop(0)
+            del self.HS[x]
+        elif self.HS.has_key(x):
+            self.hold.remove(x)
 
-        S.next = S.next.next
-
-        return A
-
-
-X = Solution()
-
-
-ans = X.solve(NLL)
-
-showLL(ans)
+        self.HS[key] = value
+        self.hold.append(key)

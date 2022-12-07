@@ -1,2 +1,1 @@
-if M is None:
-            return M
+self.inOrderCommon(A.left, iolist, C)
