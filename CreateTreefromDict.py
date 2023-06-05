@@ -97,6 +97,48 @@ class CreateTree:
 
         return A
 
+    def getBSTree(self):
+
+        A = TreeNode(10)
+
+        AA = TreeNode(5)
+        AB = TreeNode(15)
+
+        AAA = TreeNode(3)
+        AAB = TreeNode(8)
+
+        ABA = TreeNode(12)
+        ABB = TreeNode(17)
+
+        A.left = AA
+        A.right = AB
+
+        AA.left = AAA
+        AA.right = AAB
+
+        AB.left = ABA
+        #AB.right = ABB
+
+        return A
+
+    def getCustTree1(self):
+
+        # 5 1 -1 2 -1 -1
+
+        A = TreeNode(5)
+
+        AL = TreeNode(1)
+        #AR = TreeNode(15)
+
+        ALL = TreeNode(2)
+
+        A.left = AL
+        #A.right = AB
+
+        AL.left = ALL
+
+        return A
+
     def getTree(self):
 
         one = TreeNode(1)
@@ -158,6 +200,25 @@ class CreateTree:
 
         A.left = AA
         A.right = AB
+
+        return A
+
+    def getTreeLeft1(self):
+
+        A = TreeNode(3)
+
+        AA = TreeNode(0)
+        BB = TreeNode(1)
+
+        AA.left = TreeNode(1)
+
+        A.left = AA
+        A.right = BB
+
+        BBB = TreeNode(1)
+        BB.right = BBB
+
+        BBB.right = TreeNode(1)
 
         return A
 

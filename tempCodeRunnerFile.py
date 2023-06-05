@@ -1,1 +1,3 @@
-self.inOrderCommon(A.left, iolist, C)
+A = [1, 2, 3, 4, 2, 7, 1, 3, 6]
+B = 6
+X = [7, 7, 7, 7]
